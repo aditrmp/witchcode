@@ -9,12 +9,12 @@ public class Program
 		Console.Write("Villager 1 year of death: ");
 		int vYodFirst = Convert.ToInt32(Console.ReadLine());
 		
-        Console.Write("Villager 2 age of death: ");
+        	Console.Write("Villager 2 age of death: ");
 		int vAgeSec = Convert.ToInt32(Console.ReadLine());
 		Console.Write("Villager 2 year of death: ");
 		int vYodSec = Convert.ToInt32(Console.ReadLine());
 		
-		double result =  Result.countAverage(vAgeFirst, vYodFirst, vAgeSec, vYodSec);//countAverage(vAgeFirst, vYearFirst, vAgeSec, vYearSec);
+		double result =  Result.countAverage(vAgeFirst, vYodFirst, vAgeSec, vYodSec);
 		Console.WriteLine("Average number of people killed is " + result);
 	}
 }
@@ -33,8 +33,6 @@ class Result{
 			totalVictims1 = countPeopleKilled(yobFirst);
 			totalVictims2 = countPeopleKilled(yobSec);
 			result =  (totalVictims1+totalVictims2)/2;
-			Console.WriteLine("korban1 "+countPeopleKilled(yobFirst));
-			Console.WriteLine("korban2 "+countPeopleKilled(yobSec));
 		}
 			
 		return result;
@@ -45,7 +43,6 @@ class Result{
 		int num2 = 1;
 		int num3 = 0;
 		int result = 0;
-		Console.WriteLine(year);
 			
 		if(year == 1){
 			result = 1;
@@ -53,7 +50,6 @@ class Result{
 			result = 1;
 			for(int i=1; i<year; i++){
 				num3 = num1 + num2;
-				Console.Write(num3 + ", ");
 				result += num3;
 				num1 = num2;
 				num2 = num3;
